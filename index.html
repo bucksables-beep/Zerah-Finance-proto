@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>Zerah Finance</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#B7CC16",
+                        "background-light": "#F4F7F6",
+                        "background-dark": "#052826",
+                        "surface-dark": "#0A3532",
+                        "secondary-dark": "#01203F",
+                        "accent-purple": "#8F93FF",
+                    },
+                    fontFamily: {
+                        sans: ["Inter", "sans-serif"],
+                        display: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "16px",
+                    },
+                    animation: {
+                        'spin-slow': 'spin 3s linear infinite',
+                    }
+                },
+            },
+        };
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+            overscroll-behavior-y: contain;
+        }
+        .ios-blur {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .pattern-overlay {
+            background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCrlbrYrJ2VYuiEzvYdzOf5LcpAMx4OEVg5tKtlZC_9Q8abQH7SwiG55aKVp1ZIC31gPEproyqjbSowRdCKYA_PGnUHmTzblwZngm6nkcFcs-NjzbAzEJxiX3MJ4yDusnP8q2c2Hi2DKXfJkQ0iiXu9l4VVPuEZOIXWKnt6l5AHxOyXmXiBDBBfrTqz5UDaV-OILRFeMzFZRvi1ybMe1tA1HkP-i568CqpdVcWkBkSJ9HoPIljT3_n6MivJa2O2yeuVQACphD8HM8EP);
+            background-repeat: repeat;
+            background-size: 150px;
+            opacity: 0.03;
+            pointer-events: none;
+        }
+        /* Mobile height fixes */
+        html, body, #root {
+            height: 100%;
+        }
+        @keyframes spin-slow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-spin-slow {
+            animation: spin-slow 3s linear infinite;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "@google/genai": "https://esm.sh/@google/genai@^1.40.0"
+  }
+}
+</script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white transition-colors duration-300">
+    <div id="root"></div>
+</body>
+</html>
