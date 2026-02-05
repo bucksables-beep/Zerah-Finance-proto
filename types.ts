@@ -29,7 +29,7 @@ export interface Transaction {
   name: string;
   date: string;
   amount: number;
-  currency: 'USD' | 'EUR' | 'GBP' | 'NGN';
+  currency: 'USD' | 'EUR' | 'GBP' | 'NGN' | 'AUD' | 'CNY';
   type: 'expense' | 'income';
   icon: string;
   status?: 'Completed' | 'Pending' | 'Failed';

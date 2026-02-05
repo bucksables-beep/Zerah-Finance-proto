@@ -14,8 +14,15 @@ const Wallets: React.FC<WalletsProps> = ({ wallets, onAddWallet, onNavigateToRec
   const [showAddWalletModal, setShowAddWalletModal] = useState(false);
 
   const totalBalanceUSD = wallets.reduce((acc, w) => {
-    // Mock conversion for display purposes
-    const rates: Record<string, number> = { 'USD': 1, 'EUR': 1.08, 'GBP': 1.27, 'NGN': 0.00062 };
+    // Mock conversion rates for display purposes
+    const rates: Record<string, number> = { 
+      'USD': 1, 
+      'EUR': 1.08, 
+      'GBP': 1.27, 
+      'NGN': 0.00062,
+      'AUD': 0.65,
+      'CNY': 0.14
+    };
     return acc + (w.balance * (rates[w.currency] || 1));
   }, 0);
 
