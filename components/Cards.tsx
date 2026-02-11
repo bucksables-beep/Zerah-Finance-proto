@@ -7,6 +7,8 @@ interface CardsProps {
   onBack: () => void;
 }
 
+const BRAND_LOGO_URL = "https://lh3.googleusercontent.com/d/1CI2jqRX0yMn6oo9RCKcbwyJ3mRlhrSF-";
+
 type CardAction = 'toggleFreeze' | 'revealDetails' | 'createCard';
 
 const INITIAL_CARDS: Card[] = [
@@ -162,7 +164,7 @@ const Cards: React.FC<CardsProps> = ({ onBack }) => {
               <div className="flex justify-between items-start">
                 <div className="flex items-center gap-2">
                   <div className="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center backdrop-blur-md">
-                     <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6nUcfd4IketzNuR6aBfGSjjVjLc54Um9uCNVrS07a_3jO3f_TKXJxFpyJOqWZYpitye0S3KArDO-_MsSA9QIpIRZutK4T151eNOUHDtiqLp1gWMjI3oKFKTlqQOSFrS7_zsbVLyorB83fl2GXm-IpyYZliOXd4lYy521DwcfN8YEWFK3B5j1PB65OCgUxfl2h03B3xYE-rNHcJpcveEssEf5rHxTusH9FSnzxbLkpHi0iXbsu6g9CO5a2QQp2Ya5cfSGP5VcJq63U" className="w-6 h-6" alt="Zerah" />
+                     <img src={BRAND_LOGO_URL} className="w-6 h-6 object-contain" alt="Zerah" />
                   </div>
                   <span className="text-[10px] font-black uppercase tracking-[0.3em] text-white/40">{card.type} Virtual ({card.currency})</span>
                 </div>
