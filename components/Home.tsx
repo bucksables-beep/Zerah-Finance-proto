@@ -12,6 +12,7 @@ interface HomeProps {
   onNavigateToTransaction: (tx: Transaction) => void;
   onNavigateToProfile: () => void;
   onNavigateToNotifications: () => void;
+  onNavigateToCards: () => void;
 }
 
 const Home: React.FC<HomeProps> = ({ 
@@ -22,7 +23,8 @@ const Home: React.FC<HomeProps> = ({
   onNavigateToReceive,
   onNavigateToTransaction,
   onNavigateToProfile,
-  onNavigateToNotifications
+  onNavigateToNotifications,
+  onNavigateToCards
 }) => {
   const [selectedWallet, setSelectedWallet] = useState<Wallet | null>(null);
   const [showAddWalletModal, setShowAddWalletModal] = useState(false);
@@ -211,7 +213,7 @@ const Home: React.FC<HomeProps> = ({
               </div>
               <span className="text-[11px] font-bold uppercase tracking-tighter dark:text-slate-300">Receive</span>
             </button>
-            <button className="flex flex-col items-center gap-2 group">
+            <button onClick={onNavigateToCards} className="flex flex-col items-center gap-2 group">
               <div className="w-full aspect-square bg-white dark:bg-surface-dark text-slate-900 dark:text-white rounded-[24px] flex items-center justify-center border border-slate-200 dark:border-white/5 active:scale-95 transition-all group-hover:bg-slate-50 dark:group-hover:bg-surface-dark/80">
                 <span className="material-icons-round">credit_card</span>
               </div>

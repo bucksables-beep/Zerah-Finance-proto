@@ -147,6 +147,7 @@ const App: React.FC = () => {
             onNavigateToTransaction={handleNavigateToTransaction}
             onNavigateToProfile={() => setCurrentView(View.PROFILE)}
             onNavigateToNotifications={() => setCurrentView(View.NOTIFICATIONS)}
+            onNavigateToCards={() => setCurrentView(View.CARDS)}
           />
         );
       case View.CONVERT:
